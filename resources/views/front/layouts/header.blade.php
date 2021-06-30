@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Clean Blog - Start Bootstrap Theme</title>
+        <title>@yield('title','Blog Sitesi')</title>
+        <!--yield tanımladık title isimli, homepage'de section ın title isimlisi var, oraya bağlantılı. 
+            Eğer orada bir şey yoksa default Blog Sitesi yazacak. Ama biz Anasayfa yazdık section da-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
