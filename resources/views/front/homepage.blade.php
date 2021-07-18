@@ -19,8 +19,9 @@
 
                         <!-- Post preview-->
                         <div class="post-preview">
-                            <a href="post.html">
+                            <a href="{{ route('single', [$article->getCategory->slug,$article->slug]) }}">
                                 <h2 class="post-title">{{ $article->title }}</h2>
+                                <img src="{{ $article->image }}"/> 
                                 <h3 class="post-subtitle">{{Illuminate\Support\Str::limit($article->content,75) }}</h3>
                                 <!--Tüm metni değil de ilk 50 karakteri göstermesini sağladım. -->
                             </a>
