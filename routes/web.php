@@ -19,5 +19,6 @@ Route::get('/', function () {
 });
 */
 
+Route::get('/kategori/{category}', 'App\Http\Controllers\Front\Homepage@category')->name('category');
 Route::get('/','App\Http\Controllers\Front\Homepage@index')->name('homepage');
 Route::get('/{category}/{slug}','App\Http\Controllers\Front\Homepage@single')->name('single');
