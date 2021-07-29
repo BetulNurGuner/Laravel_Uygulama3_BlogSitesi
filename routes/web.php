@@ -19,6 +19,10 @@ Route::get('/', function () {
 });
 */
 
+Route::get('/iletisim','App\Http\Controllers\Front\Homepage@contact')->name('contact'); 
+//sabit verilen url ler yukarıda olmalı yoksa {sayfa} içinde arayıp bulamıyor yoksa.
+Route::post('/iletisim','App\Http\Controllers\Front\Homepage@contactpost')->name('contact.post');
+//Farklı metodlar olduğu için get ve post ikisinde de iletisim yolunu kullanabilirim.
 Route::get('/kategori/{category}', 'App\Http\Controllers\Front\Homepage@category')->name('category');
 Route::get('/','App\Http\Controllers\Front\Homepage@index')->name('homepage');
 Route::get('/{category}/{slug}','App\Http\Controllers\Front\Homepage@single')->name('single');
