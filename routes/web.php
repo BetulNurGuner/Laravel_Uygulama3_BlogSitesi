@@ -19,6 +19,13 @@ Route::get('/', function () {
 });
 */
 
+
+//BACK ROUTES - ADMİN PANEL
+Route::get('admin/panel','App\Http\Controllers\Back\Dashboard@index')->name('admin.dashboard');
+Route::get('admin/giris','App\Http\Controllers\Back\Auth@login')->name('admin.login');
+
+
+//FRONT ROUTES
 Route::get('/iletisim','App\Http\Controllers\Front\Homepage@contact')->name('contact'); 
 //sabit verilen url ler yukarıda olmalı yoksa {sayfa} içinde arayıp bulamıyor yoksa.
 Route::post('/iletisim','App\Http\Controllers\Front\Homepage@contactpost')->name('contact.post');
