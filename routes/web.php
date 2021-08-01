@@ -22,8 +22,9 @@ Route::get('/', function () {
 
 //BACK ROUTES - ADMİN PANEL
 Route::get('admin/panel','App\Http\Controllers\Back\Dashboard@index')->name('admin.dashboard');
-Route::get('admin/giris','App\Http\Controllers\Back\Auth@login')->name('admin.login');
-
+Route::get('admin/giris','App\Http\Controllers\Back\AuthController@login')->name('admin.login');
+Route::post('admin/giris','App\Http\Controllers\Back\AuthController@loginPost')->name('admin.login.post');
+Route::get('admin/cikis','App\Http\Controllers\Back\AuthController@logout')->name('admin.logout');
 
 //FRONT ROUTES
 Route::get('/iletisim','App\Http\Controllers\Front\Homepage@contact')->name('contact'); 
